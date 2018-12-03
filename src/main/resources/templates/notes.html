@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Notes</title>
+<link rel="stylesheet" type="text/css" th:href="@{css/index.css}">
+</head>
+<body>
+<div class="form-style-5">
+	<table>
+	<tr>
+	<th>Etudiant</th>
+	<th>Matiere</th>
+	<th>Note</th>
+	</tr>
+		<tr th:each="var : ${listeNotes}">
+
+			
+			<td th:text="${var.etudiant.nom}"></td>
+			<td th:text="${var.matiere.nom}"></td>
+			<td th:text="${var.note}"></td>
+
+		</tr>
+
+	</table>
+</div>
+</body>
+</html>
